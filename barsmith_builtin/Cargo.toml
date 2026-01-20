@@ -1,0 +1,17 @@
+[package]
+name = "barsmith_builtin"
+version = "0.1.0"
+edition = "2024"
+description = "Built-in minimal feature engineering and target labeling for Barsmith."
+license = "MIT"
+repository = "https://github.com/psdon/barsmith"
+readme = "../README.md"
+rust-version = "1.85"
+publish = false
+
+[dependencies]
+anyhow = "1.0"
+barsmith_rs = { path = "../barsmith_rs" }
+polars = { version = "0.39", features = ["lazy", "strings"] }
+tracing = "0.1"
+

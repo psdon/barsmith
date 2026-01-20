@@ -1,0 +1,530 @@
+{
+  "rsi_14": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "RSI 14-period (0=oversold, 100=overbought)"
+  },
+  "rsi_7": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "RSI 7-period (fast)"
+  },
+  "rsi_21": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "RSI 21-period (slow)"
+  },
+  "adx": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "ADX (>=25 = trending, <=20 = ranging)"
+  },
+  "kf_adx": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "Kalman-filtered ADX"
+  },
+  "atr_pct": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "ATR as % of price (atr / close)"
+  },
+  "volatility_20_cv": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "20-period volatility (coefficient of variation: std/mean)"
+  },
+  "momentum_14": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">",
+      "<"
+    ],
+    "description": "14-period momentum"
+  },
+  "roc_5": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">",
+      "<"
+    ],
+    "description": "5-period rate of change (%)"
+  },
+  "roc_10": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">",
+      "<"
+    ],
+    "description": "10-period rate of change (%)"
+  },
+  "body_size_pct": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "Candle body size as % of price (|close - open| / close)"
+  },
+  "consecutive_green": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">="
+    ],
+    "description": "Count of consecutive green bars (0-3, integer)"
+  },
+  "bb_position": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "Position within BB (0=lower, 1=upper, can exceed)"
+  },
+  "kf_vs_200sma": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "KF price vs 200 SMA ratio (0 = at MA)"
+  },
+  "kf_vs_9ema": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "KF price vs 9 EMA ratio (0 = at MA)"
+  },
+  "price_vs_9ema_dev": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "Price deviation from 9 EMA ((close - 9ema) / close)"
+  },
+  "price_vs_200sma_dev": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "Price deviation from 200 SMA ((close - 200sma) / close)"
+  },
+  "9ema_to_200sma": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "9 EMA position vs 200 SMA ((9ema - 200sma) / 200sma)"
+  },
+  "kf_trend_momentum": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">",
+      "<"
+    ],
+    "description": "KF trend momentum (kf_trend - kf_trend.shift(5))"
+  },
+  "kf_atr_momentum_5": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">",
+      "<"
+    ],
+    "description": "KF ATR momentum 5-period (kf_atr - kf_atr.shift(5))"
+  },
+  "kf_atr_c2c_momentum_5": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">",
+      "<"
+    ],
+    "description": "KF c2c volatility momentum 5-period (kf_atr_c2c - kf_atr_c2c.shift(5))"
+  },
+  "kf_adx_momentum_5": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">",
+      "<"
+    ],
+    "description": "KF ADX momentum 5-period (kf_adx - kf_adx.shift(5))"
+  },
+  "kf_atr_pct": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "KF ATR as % of price (kf_atr / close)"
+  },
+  "kf_atr_c2c_pct": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "KF c2c volatility as % of price (kf_atr_c2c / close)"
+  },
+  "kf_innovation_abs": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "Absolute Kalman innovation |actual - predicted|"
+  },
+  "kf_adx_innovation_abs": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "Absolute ADX innovation |actual_adx - predicted_adx|"
+  },
+  "kf_price_deviation": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "Price deviation from KF (0 = aligned)"
+  },
+  "kf_atr_deviation": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">",
+      "<"
+    ],
+    "description": "ATR deviation from KF (atr - kf_atr) / kf_atr"
+  },
+  "kf_adx_deviation": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">",
+      "<"
+    ],
+    "description": "ADX deviation from KF (adx - kf_adx) / kf_adx"
+  },
+  "kf_atr_vs_c2c": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">",
+      "<"
+    ],
+    "description": "Ratio of ATR to c2c volatility (kf_atr / kf_atr_c2c)"
+  },
+  "kf_trend_volatility_ratio": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">",
+      "<"
+    ],
+    "description": "Trend strength to volatility ratio (kf_adx / kf_atr_pct)"
+  },
+  "atr_c2c_pct": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "Close-to-close ATR as % of price (atr_c2c / close)"
+  },
+  "bb_std": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">",
+      "<"
+    ],
+    "description": "Bollinger Band width (volatility measure)"
+  },
+  "macd": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "MACD line (0 = trend change)"
+  },
+  "macd_hist": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "MACD histogram (0 = divergence signal)"
+  },
+  "macd_signal": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "MACD signal line"
+  },
+  "stoch_k": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "Stochastic %K (momentum, 0-100 scale)"
+  },
+  "stoch_d": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "Stochastic %D (smoothed %K, 0-100 scale)"
+  },
+  "ext": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "Extension from previous bar (absolute)"
+  },
+  "ext_sma14": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "Smoothed extension (14-period SMA)"
+  },
+  "momentum_score": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "Combined momentum score (0-1 scale)"
+  },
+  "wicks_diff": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "Difference between upper and lower wicks (rejection strength)"
+  },
+  "wicks_diff_sma14": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "Smoothed wicks difference (14-period SMA)"
+  },
+  "kf_wicks_smooth": {
+    "enabled": false,
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "Kalman-filter smoothed wicks_diff"
+  },
+  "bar_range_pct": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "Bar range as % of price ((high - low) / close)"
+  },
+  "body_to_total_wick": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">",
+      "<"
+    ],
+    "description": "Body vs total wick ratio (abs_body / (upper_wick + lower_wick))"
+  },
+  "body_atr_ratio": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">",
+      "<"
+    ],
+    "description": "Body vs ATR(14) ratio (abs_body / atr)"
+  },
+  "trend_strength": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "Trend quality/strength metric (0-1 scale)"
+  },
+  "adx_sma": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">=",
+      "<="
+    ],
+    "description": "Smoothed ADX (trend strength, 0-100 scale)"
+  },
+  "lower_shadow_ratio": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "Lower wick as % of bar range (0-1, buying pressure/support)"
+  },
+  "upper_shadow_ratio": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "Upper wick as % of bar range (0-1, selling pressure/resistance)"
+  },
+  "atr_pct_mean50": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "50-period moving average of ATR as % of price"
+  },
+  "atr_c2c_mean50": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "50-period moving average of close-to-close ATR as % of price"
+  },
+  "kf_atr": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "Kalman-filtered ATR (absolute volatility level)"
+  },
+  "kf_atr_c2c": {
+    "min": "auto",
+    "max": "auto",
+    "increment": "auto",
+    "operators": [
+      ">"
+    ],
+    "description": "Kalman-filtered close-to-close volatility (ATR c2c)"
+  }
+}

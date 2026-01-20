@@ -1,0 +1,7 @@
+[env]
+DUCKDB_RUST_CXX_STD = "c++17"
+
+[build]
+# Optimize for the local machine CPU. This is not suitable for cross-compilation or
+# distributing the resulting binaries to different CPU generations/architectures.
+rustflags = ["-C", "target-cpu=native"]

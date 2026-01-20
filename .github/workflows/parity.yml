@@ -1,0 +1,37 @@
+name: examples
+
+on:
+  push:
+    paths:
+      - "custom_rs/**"
+      - "barsmith_rs/**"
+      - "Cargo.toml"
+      - "Cargo.lock"
+      - ".github/workflows/parity.yml"
+  pull_request:
+    paths:
+      - "custom_rs/**"
+      - "barsmith_rs/**"
+      - "Cargo.toml"
+      - "Cargo.lock"
+      - ".github/workflows/parity.yml"
+  workflow_dispatch:
+
+jobs:
+  custom-rs:
+    runs-on: ubuntu-latest
+    env:
+      # Work around occasional `ld.lld` crashes on GitHub-hosted runners when linking
+      # very large test binaries (DuckDB + Polars + Arrow). Force GNU ld (bfd).
+      RUSTFLAGS: "-C link-arg=-fuse-ld=bfd"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: 1.91.1
+          components: rustfmt, clippy
+
+      - name: Run custom_rs tests
+        run: cargo test -p custom_rs --all-targets

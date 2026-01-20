@@ -1,0 +1,25 @@
+[package]
+name = "custom_rs"
+version = "0.1.0"
+edition = "2024"
+description = "Built-in feature engineering and targets used by Barsmith (example implementation)."
+license = "MIT"
+repository = "https://github.com/psdon/barsmith"
+readme = "../README.md"
+rust-version = "1.85"
+publish = false
+
+[dependencies]
+barsmith_rs = { path = "../barsmith_rs" }
+anyhow = "1.0"
+polars = { version = "0.39", features = ["lazy", "strings", "parquet"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4.42", default-features = false, features = ["std"] }
+tracing = "0.1"
+sha2 = "0.10"
+hex = "0.4"
+
+[dev-dependencies]
+tempfile = "3.10"
+polars = { version = "0.39", features = ["lazy"] }

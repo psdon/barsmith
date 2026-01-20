@@ -1,0 +1,18 @@
+[workspace]
+members = [
+    "barsmith_rs",
+    "barsmith_cli",
+    "barsmith_builtin",
+    "custom_rs"
+]
+default-members = [
+    "barsmith_rs",
+    "barsmith_cli",
+    "barsmith_builtin"
+]
+resolver = "2"
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+lto = "thin"

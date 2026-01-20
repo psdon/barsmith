@@ -1,0 +1,11 @@
+[advisories]
+# Configuration for `cargo audit` (RustSec).
+#
+# If you need to temporarily ignore an advisory:
+# 1) Prefer upgrading via `cargo update -p <crate>`.
+# 2) If unavoidable, add the RustSec ID to `ignore` with a short rationale in the PR.
+#
+# Example:
+# ignore = ["RUSTSEC-0000-0000"]
+ignore = []
+
